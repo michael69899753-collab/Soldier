@@ -1,0 +1,350 @@
+/*
+Theme Name: Hello Elementor Child
+Theme URI: https://elementor.com/hello-theme/?utm_source=wp-themes&utm_campaign=theme-uri&utm_medium=wp-dash
+Template: hello-elementor
+Author: Elementor Team
+Author URI: https://elementor.com/?utm_source=wp-themes&utm_campaign=author-uri&utm_medium=wp-dash
+Description: Hello Elementor is a lightweight and minimalist WordPress theme that was built specifically to work seamlessly with the Elementor site builder plugin. The theme is free, open-source, and designed for users who want a flexible, easy-to-use, and customizable website. The theme, which is optimized for performance, provides a solid foundation for users to build their own unique designs using the Elementor drag-and-drop site builder. Its simplicity and flexibility make it a great choice for both beginners and experienced Web Creators.
+Tags: accessibility-ready,flexible-header,custom-colors,custom-menu,custom-logo,featured-images,rtl-language-support,threaded-comments,translation-ready
+Version: 3.4.4.1756966399
+Updated: 2025-09-04 06:13:19
+
+*/
+
+
+/*==================================
+General CSS
+===================================*/
+:root {
+	--primary-color:#FFC331;			    
+}
+
+.section-title .elementor-heading-title { color: var(--primary-color); }
+.section-title h2.elementor-heading-title { font-size: 96px; line-height: 1.2; font-weight: 700; color: var(--primary-color); text-align: center;  text-shadow: 4px 4px 0px #000000; text-shadow:
+    -3px -3px 0 #000,
+     3px -3px 0 #000,
+    -3px  3px 0 #000,
+     3px  3px 0 #000,
+     0px -3px 0 #000,
+     0px  3px 0 #000,
+    -3px  0px 0 #000,
+     3px  0px 0 #000,
+	    5px  5px 0 #000;} 
+a:focus { outline:none; }
+
+/*==================================
+   Base / Reset Styles
+===================================*/
+
+*, 
+*::before,
+*::after { box-sizing: border-box; }
+* { margin: 0; padding: 0; }
+html { font-size: 100%; scroll-behavior: smooth; overflow-x:hidden; }
+body { font-size:36px; line-height: 1.2; -webkit-font-smoothing: antialiased;  font-family: "Bahianita", sans-serif; color:#ffffff; overflow-x:hidden;}
+input,
+button,
+textarea,
+select { font: inherit; border: none; outline: none; }
+
+/*==================================
+   Typography
+===================================*/
+h1, h2, h3, h4, h5, h6 { font-weight: 400; line-height: 1.25; margin-bottom: 0.5em;  font-family: "Alfa Slab One", serif;}
+p { margin-bottom: 1em; }
+a { color: inherit; text-decoration: none; transition: color 0.3s ease;  }
+
+/*==================================
+   Header
+===================================*/
+body.home header { position: absolute; top: 0; left: 0; width: 100%; z-index: 1;}
+.elementor-nav-menu--main .elementor-nav-menu a,
+.elementor-nav-menu--main .elementor-nav-menu a:hover { padding: 10px 15px;}
+
+.elementor-nav-menu li a { font-size: 36px; font-weight: 400;  line-height: 1.3;  position: relative; font-family: "Bahianita", sans-serif; color:#ffffff;}
+.elementor-nav-menu li a:hover,
+.elementor-nav-menu li.current-menu-item a  { color:var(--primary-color) !important; line-height: 1.3; }
+.elementor-nav-menu li a:before { content: ''; position: absolute; bottom: 0px; left: 50%; background-image: url(images/draw-line.svg); width: 64px; height: 4px; background-repeat:no-repeat; transform: translateX(-50%) scale(0) ; opacity: 0; transition: 0.3s all ease-in-out;}
+.elementor-nav-menu li a:hover:before,
+.elementor-nav-menu li.current-menu-item a:before { transform: translateX(-50%) scale(1) ; opacity: 1;}
+.elementor-nav-menu > li.join-battle{display:none;}
+.elementor-nav-menu > li.join-battle a{position: relative; display: inline-block;padding: 9px 28px;background: url(images/btn-bg.svg) no-repeat scroll 0 0; background-size: auto;
+  background-size: cover;color: #fff;font-size:36px;font-weight: 400;text-align: center; text-decoration: none;cursor: pointer;font-family: 'Bahianita'; z-index: 1; height:64px;width:188px;
+	display: flex;justify-content: center;align-items: center;}
+
+.elementor-nav-menu > li.join-battle a:hover{background: url(images/btn-bg.svg) no-repeat scroll 0 0; background-size: auto; background-size: cover;}
+.elementor-nav-menu > li.join-battle a:before{display:none;}
+header .social-list{margin-left:20px;}
+.social-list .elementor-icon { background-image:url(images/social-icon-bg.svg); width:66px; height:67px; background-color: transparent; background-size: 64px 64px; background-repeat:no-repeat; }
+.social-list .elementor-icon svg { width:32px; height:32px; transition:0.3s all ease-in-out; }
+.social-list .elementor-icon:hover svg,
+.social-list .elementor-icon:hover svg path{ fill: var(--primary-color); }
+
+header .elementor-widget-button,
+footer .elementor-widget-button { margin-left:57px; }
+.button-brush { display:flex; }
+.button-brush .elementor-button{position: relative; display: inline-block; padding: 9px 28px; background:url(images/btn-bg.svg) no-repeat scroll 0 0; background-size:cover; color: #fff; font-size: 48px; font-weight: 400; text-align: center; text-decoration: none; cursor: pointer; font-family: 'Bahianita'; z-index: 1; height: 83px; width: 241px; display: flex; justify-content: center; align-items: center; }
+.button-brush .elementor-button:hover{color:#FFC331;}
+.main-section{padding-top:120px; padding-bottom:45px;}
+.text-with-shadow{text-shadow: 2px 2px 0px #000000;}
+.hero-section{padding-bottom:45px; padding-top:120px;}
+.hero-section .section-title h2.elementor-heading-title{text-transform:uppercase;}
+.hero-section .elementor-widget-image{margin-bottom:-27px !important;}
+.strip-marquee-one > .elementor-element,
+.strip-marquee-two > .elementor-element{display: flex; gap: 20px; flex-direction: row;}
+.strip-marquee-two > .elementor-element{flex-direction: row-reverse;}
+.strip-marquee-one ul,
+.strip-marquee-two ul{display: flex; gap:30px; list-style: none;}
+
+
+.strip-marquee-one ul{animation: 60s linear infinite slider-left;}
+.strip-marquee-two ul{animation: 60s linear infinite slider-right;}
+.strip-marquee-one ul li,
+.strip-marquee-two ul li{font-style: normal; font-weight: 400; font-size: 24px; line-height: 33px; color: #FFC331;  text-transform:uppercase; text-shadow:
+    -2px -2px 0 #000,
+     2px -2px 0 #000,
+    -2px  2px 0 #000,
+     2px  2px 0 #000,
+     0px -2px 0 #000,
+     0px  2px 0 #000,
+    -2px  0px 0 #000,
+     2px  0px 0 #000,
+	    4px  4px 0 #FFC331; font-family: "Alfa Slab One", serif; position:relative; display: flex;}
+.strip-marquee-one ul li:after,
+.strip-marquee-two ul li:after{font-style: normal; font-weight: 400; font-size: 24px; line-height: 33px; color: #FFC331; text-shadow: 4px 4px 0px #FFC331; text-transform:uppercase; text-shadow:
+    -2px -2px 0 #000,
+     2px -2px 0 #000,
+    -2px  2px 0 #000,
+     2px  2px 0 #000,
+     0px -2px 0 #000,
+     0px  2px 0 #000,
+    -2px  0px 0 #000,
+     2px  0px 0 #000; font-family: "Alfa Slab One", serif; content:"x"; display:inline-block; margin-left:30px;}
+.strip-marquee-one{display: flex; flex-direction: row; align-items: center; padding: 40px 0; background: #FFFFFF; border-top: 2px solid #000000; border-bottom: 2px solid #000000; transform: rotate(5deg); left: -30px; right:  -30px; overflow: hidden; position:absolute; bottom:-70px; width:calc(100% + 60px); z-index: 1;}
+.strip-marquee-two{display: flex; flex-direction: row; align-items: center; padding: 40px 0; background: #F1E0C2; border-top: 2px solid #000000; border-bottom: 2px solid #000000; transform: rotate(-5deg); left: -30px; right: -30px; overflow: hidden; position:absolute; bottom:-70px; width:calc(100% + 60px); z-index: 1;}
+
+@keyframes slider-left {
+  0% {
+    transform:translateX(0)
+  }
+  to {
+    transform:translateX(-100%)
+  }
+}
+@keyframes slider-right {
+  0% {
+    transform:translateX(0)
+  }
+  to {
+    transform:translateX(100%)
+  }
+}
+.armoury-supply{max-width: 776px; margin:auto auto 0;}
+.armoury-section .armoury-supply p{margin-bottom:0;}
+.armoury-supply .elementor-widget-text-editor{width:433px; height:149px; background:url('images/supply-armoury-bg.png') no-repeat scroll 0 0; background-size:contain; background-repeat:no-repeat; padding:15px 30px; display:flex; align-items:center; max-width:inherit !important;}
+.armoury-supply .armoury-supplier-img{max-width:343px;}
+.coupon-code-wrapper{display:flex; margin:-12px auto 0; gap:12px; align-items:center; justify-content:center; margin-bottom:60px; }
+.coupon-code-wrapper .coupon-code{background:url(images/couponcode-bg.svg) no-repeat scroll 0 0; background-size:100% auto; height:83px; padding:14px 30px; font-size:48px; color:#FFC331;}
+
+.coupon-code-wrapper .copy-btn{background:url(images/copy-btn-bg.svg) no-repeat scroll 0 0; background-size:80px auto; height:80px; width:80px; font-size:0; display:flex; align-items:center; position:relative; justify-content:center; cursor:pointer;}
+.coupon-code-wrapper .copy-btn:before{height:32px; width:32px; background:url(images/copy-icon.svg) no-repeat scroll 0 0; content:""; background-size:32px auto;}
+.briefing-section{padding-top:200px;}
+ .tax-wrapper{text-align: center; position: relative; width: 100%; max-width: 842px; margin: auto auto 0; padding-top:150px; padding-bottom:135px; margin-top:150px; margin-bottom:150px;}
+.tax-wrapper .percent{font-size:27rem; line-height:0.9; font-weight: 700;color: var(--primary-color); text-align: center; text-shadow: -3px -3px 0 #000, 3px -3px 0 #000, -3px 3px 0 #000, 3px 3px 0 #000, 0px -3px 0 #000, 0px 3px 0 #000, -3px 0px 0 #000, 3px 0px 0 #000, 4px 4px 0 #000; font-family: "Alfa Slab One", Sans-serif;}
+.tax-wrapper .buy-tax{font-family: 'Bahianita'; font-style: normal; font-weight: 400; font-size: 128px; color: #9FFF31; transform: rotate(-15deg); position:absolute; left:-45px; top:30px; width:292px; height:158px; text-align:center; background:url('images/buy-tax-bg.svg') no-repeat scroll 0 0; background-size:cover;}
+.tax-wrapper .sell-tax{font-family: 'Bahianita'; font-style: normal; font-weight: 400; font-size: 128px; color: #FF313B; transform: rotate(15deg); position:absolute; right:40px; bottom:70px; width:298px; height:158px; text-align:center; background:url('images/sell-tax-bg.svg') no-repeat scroll 0 0; background-size:cover;}
+.sub-heading{font-size:48px;}
+.tax-wrapper:before{width:258px; height:260px; background:url(images/target-point.svg) no-repeat scroll 0 0; content:""; position:absolute; left:24%; bottom:60px;}
+
+.enlist-section{padding-top:200px;}
+.enlist-section .section-title h2.elementor-heading-title{text-align:left;}
+.enlist-section .steps-slider{margin-bottom:55vh; margin-top:100px;}
+.enlist-section .sub-heading p{margin-bottom:0;}
+.enlist-section .steps-slider{width:100%; max-width:482px;}
+.enlist-section .steps-slider .elementor-image-box-wrapper{text-align:left; padding:30px; height:205px; width:482px; background:url(images/steps-content-bg.svg) no-repeat scroll 0 0; background-repeat:no-repeat; }
+.enlist-section .steps-slider .elementor-image-box-title{color: #ffffff; font-family: "Bahianita", Sans-serif; font-size:64px;   text-shadow: 2px 2px 0px #000000; line-height:0.8; margin: 0 0 20px;}
+.enlist-section .steps-slider .elementor-image-box-description{line-height: 1;}
+.steps-slider{display: flex; flex-direction: column-reverse !important;}
+.steps-slider .slider-controls{display: flex; gap: 12px; margin-top: 40px;}
+.steps-slider .slider-counter{width:142px; height:83px; font-size: 48px; color:#FFC331;  background:url(images/slide-counter-bg.svg) no-repeat scroll 0 0; display:flex; align-items:center; padding:0 15px; text-align:center; justify-content: center;}
+.steps-slider .slick-prev,
+.steps-slider .slick-next{width:82px; height:83px; font-size:0; padding:0; background:url(images/slider-arrow-bg-white.svg) no-repeat scroll 0 0; border:0; background-size:82px 83px; display:flex; align-items:center; justify-content:center;}
+.steps-slider .slick-prev{background:url(images/slider-arrow-bg-white-left.svg) no-repeat scroll 0 0; background-size:82px 83px;}
+.steps-slider .slick-prev:before,
+.steps-slider .slick-next:before{content:""; height:32px; width:32px; background-size:32px 32px; background-repeat:no-repeat; background-image:url(images/left-arrow-white.svg);}
+.steps-slider .slick-next:before{transform:rotate(180deg);}
+
+
+
+
+.steps-slider .slick-prev.slick-disabled,
+.steps-slider .slick-prev:hover{background:url(images/slider-arrow-bg-yellow.svg) no-repeat scroll 0 0; background-size:82px 83px;}
+.steps-slider .slick-next.slick-disabled,
+.steps-slider .slick-next:hover{background:url(images/slider-arrow-bg-yellow-right.svg) no-repeat scroll 0 0; background-size:82px 83px;}
+.steps-slider .slick-next.slick-disabled:before,
+.steps-slider .slick-next:hover::before{background-image:url(images/left-arrow-yellow.svg);}
+
+.steps-slider .slick-prev.slick-disabled:before,
+.steps-slider .slick-prev:hover::before{background-image:url(images/left-arrow-yellow.svg);}
+.steps-slider{display:block !important}
+.steps-slider .slick-track:before,
+.steps-slider .slick-track:after{display:none;}
+
+/*==================================
+   Footer
+===================================*/
+footer.elementor-location-footer{position:relative;}
+footer.elementor-location-footer > .elementor-element:before{background-color:#000000; opacity:0.2; position:absolute; left:0; right:0; bottom:0; top:0; content:""; z-index:0; clear:none; display:block;}
+
+footer.elementor-location-footer .e-con-inner{position:relative; z-index:1;}
+.button-brush.with-soldier {position: relative; overflow:visible;}
+.button-brush.with-soldier:before {content: '';  position: absolute; background-image: url(images/ft-frog-soldier.png); width: 131px; height: 227px; top: -200px; left: 50%; transform: translateX(-50%);    z-index: 0;}
+
+
+@media only screen and (max-width:1365px) {
+	
+}
+@media only screen and (max-width:1279px) {
+	header > .elementor-element > .e-con-inner{padding-left:20px; padding-right:20px;}
+	.main-section > .e-con-inner{padding-left:20px; padding-right:20px;}
+	.elementor-nav-menu li a{font-size: 28px;}
+	.button-brush .elementor-button{font-size: 30px; height:62px; width: 180px; }
+	.social-list .elementor-icon{width: 60px; height: 60px; background-size: 60px 60px; }
+	.social-list .elementor-icon svg{width: 28px; height: 28px;}
+	.section-title h2.elementor-heading-title{font-size: 72px;}
+	.hero-section .elementor-widget-image{margin-bottom: -22px !important;}
+	.strip-marquee-one{padding: 20px 0;}
+	.strip-marquee-two{padding: 20px 0;}
+	.briefing-section{padding-top: 130px;}
+	.tax-wrapper{margin-bottom: 20px; padding-top:60px; padding-bottom: 135px; margin-top: 150px; }
+	.tax-wrapper .percent{font-size:18rem; }
+	.tax-wrapper::before{width:158px; background-size: cover; height:160px; left:33%; bottom: 80px;}
+	.tax-wrapper .buy-tax{font-size: 85px; width: 204px; height: 110px; left:90px; top: -20px;}
+	.tax-wrapper .sell-tax{font-size: 85px; width: 207px; height: 110px; right:160px; bottom: 80px;}
+	.enlist-section{padding-top: 160px; background-position: top center !important; }
+	.enlist-section .steps-slider{margin-bottom: 30vh;}
+	footer.elementor-location-footer > .elementor-element{min-height:480px !important;}
+	footer.elementor-location-footer > .elementor-element > .e-con-inner{ padding-top:120px;}
+}
+@media only screen and (max-width:1170px) {
+	footer .elementor-widget-theme-site-logo img{height: 85px !important; width:auto !important;}
+	.button-brush.with-soldier::before{background-size: cover; width: 90px; height: 156px; top: -150px; left:60%;}
+	.hero-section p{margin-bottom:0;}
+	.coupon-code-wrapper .coupon-code{font-size: 40px; height: 70px;}
+	.coupon-code-wrapper .copy-btn{background-size: 70px auto; height: 70px; width: 70px;}
+	.enlist-section{    padding-top: 130px;}
+	.enlist-section .steps-slider{margin-top: 30px;  margin-bottom: 20vh; }
+	header > .elementor-element > .e-con-inner > .elementor-element:last-child{flex-direction:row-reverse; justify-content: flex-start;}
+	header .elementor-widget-button{display:none;}
+	header .elementor-menu-toggle{background: url(images/slider-arrow-bg-yellow.svg) no-repeat scroll 0 0; background-size: 60px 60px; margin: 0 !important; padding: 0; width: 60px !important;
+    height: 60px; align-self: end;  top:0px; position: relative; margin-left: 15px !important;}
+	header .elementor-menu-toggle .elementor-menu-toggle__icon--open path,
+	header .elementor-menu-toggle .elementor-menu-toggle__icon--close path{display:none;}
+	header .elementor-menu-toggle .elementor-menu-toggle__icon--open{ background:url(images/menu-toggle-icon.svg) no-repeat scroll 0 0; background-size:24px 18px; background-position:center; height: 60px; width: 60px;}
+	header .elementor-menu-toggle .elementor-menu-toggle__icon--close{ background:url(images/menu-toggle-close-icon.svg) no-repeat scroll 0 0; background-size:24px 18px; background-position:center; height: 60px; width: 60px;}
+	header  > .elementor-element > .e-con-inner > *{position:static;}
+	header .elementor-nav-menu--dropdown{background-color: rgba(72,85,45,0.95); font-size: 18px;  position: absolute; left: 10px;  right: 10px; border: 1px solid #000; top: 8px; padding: 120px 30px 30px; text-align: center; border-radius: 8px; z-index: -1; width: auto; margin: 0 !important;}
+	header  > .elementor-element .elementor-widget-nav-menu{position:static;}
+	header  > .elementor-element .elementor-nav-menu{ display: flex;flex-direction: column;justify-content: center; align-items: center;}
+	header .elementor-nav-menu--dropdown .elementor-item:hover{background:transparent;}
+	.elementor-nav-menu > li.join-battle{display:block; margin-top: 15px;}
+	.elementor-nav-menu li a{font-size: 36px;}
+	footer .elementor-nav-menu > li.join-battle{display:none;}
+	.elementor-nav-menu li a{font-size: 30px;  padding: 0 10px !important;}
+	
+}
+@media only screen and (max-width:1023px) {
+	header > .elementor-element > .e-con-inner > .elementor-element:first-child{width:30%;}
+	header > .elementor-element > .e-con-inner > .elementor-element:last-child{width:70%;}
+
+	header > .elementor-element > .e-con-inner{padding-top: 15px; padding-bottom: 15px;}
+	.armoury-supply .elementor-widget-text-editor{width: 390px; height: 139px; font-size: 30px;}
+	.sub-heading{font-size: 40px;}
+	.section-title h2.elementor-heading-title{font-size: 62px;}
+	.tax-wrapper .sell-tax{right: 90px; bottom: 70px;}
+	.tax-wrapper .buy-tax{left: 40px;}
+	.enlist-section > .e-con-inner > .elementor-element:first-child{width:100%;}
+}
+@media only screen and (max-width:767px) {
+	header > .elementor-element > .e-con-inner{flex-direction: row !important; flex-wrap: nowrap !important;}
+	header > .elementor-element > .e-con-inner > .elementor-element:first-child{width:200px;}
+	header > .elementor-element > .e-con-inner > .elementor-element:last-child{flex-direction: row; flex-wrap: nowrap; width: calc(100% - 180px); justify-content: end;}
+	header .elementor-widget-button, footer .elementor-widget-button{margin-left: 0px;}
+	.social-list .elementor-icon{width: 48px; height: 48px; background-size: 48px 48px;}
+	.button-brush .elementor-button{padding:2px 10px; font-size: 26px; height:48px; width: 140px;}
+	.section-title h2.elementor-heading-title{font-size: 48px;}
+	.hero-section .elementor-widget-image{margin-bottom: -17px !important;}
+	body{font-size: 30px;}
+	.strip-marquee-one{padding: 12px 0; }
+	.strip-marquee-two{padding: 12px 0;}
+	.armoury-supply .armoury-supplier-img{max-width: 100%;}
+	.coupon-code-wrapper{margin: 15px auto 0; margin-bottom: 0px;}
+	.coupon-code-wrapper .coupon-code {font-size: 42px; height: 83px; background-size: 257px 83px; padding: 0 14px; display: inline-block; overflow: hidden; text-overflow: ellipsis;
+    background-image: url(images/couponcode-bg-small.svg); width: 257px; line-height: 80px;}
+	.coupon-code-wrapper .copy-btn{background-size:83px auto; height:83px; width:83px;}
+	.coupon-code-wrapper .copy-btn::before{background-size: 36px auto; height: 36px; width: 36px;}
+	 .armoury-supply .elementor-widget-text-editor {width: 389px; height: 112px;font-size: 30px; margin: 0 auto 30px; text-align: center; background-size: 390px 112px;}
+	.tax-wrapper .buy-tax{font-size: 54px; width: 142px; height: 77px; top:20px;}
+	.tax-wrapper .percent{font-size: 14rem; }
+	.tax-wrapper::before{bottom: 117px; height: 100px; width: 98px;}
+	.tax-wrapper .sell-tax{font-size: 54px; width: 128px;height: 68px; bottom: 110px;}
+	.enlist-section .steps-slider .elementor-image-box-title{font-size: 42px;}
+	.enlist-section .steps-slider{max-width: 340px; }
+	.enlist-section .steps-slider .elementor-image-box-wrapper{background-image: url(images/steps-content-bg-small.svg); height:243px; width: 363px;}
+	.steps-slider .slick-prev, .steps-slider .slick-next{width: 60px; height: 60px; background-size: 60px 60px;}
+	.steps-slider .slider-counter{width: 103px; height: 60px; background-size: cover; font-size: 40px;}
+	.steps-slider .slick-next.slick-disabled, .steps-slider .slick-next:hover,
+	.steps-slider .slick-prev.slick-disabled, .steps-slider .slick-prev:hover{background-size:60px 60px;}
+	.enlist-section .steps-slider{margin-bottom: 6vh;}
+	.button-brush.with-soldier::before {display:none;}
+	footer.elementor-location-footer > .elementor-element > .e-con-inner{padding-top:120px;  gap: 20px;}
+	footer.elementor-location-footer > .elementor-element{min-height:575px !important;}
+	.strip-marquee-one{bottom: -50px; }
+	.strip-marquee-two{bottom: -50px;}
+	.hero-section .social-list{margin-top:30px;}
+	.section-title h2.elementor-heading-title{text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 0px -1px 0 #000, 0px 1px 0 #000, -1px 0px 0 #000, 1px 0px 0 #000, 2px 2px 0 #000;}
+	header .elementor-widget-button{display:none;}
+	header .social-list {display:none;}
+}
+@media only screen and (max-width:639px) {
+	header.elementor-location-header .social-list{display:none !important;}
+	.section-title h2.elementor-heading-title{font-size: 36px; }
+	.hero-section .elementor-widget-image{margin-bottom: -20px !important;}
+	body{font-size: 25px;}
+	.text-with-shadow {text-shadow: 1px 1px 1px #000;}
+	.tax-wrapper .buy-tax{left: 0; }
+	.tax-wrapper .sell-tax{right: 0;}
+	.enlist-section .steps-slider .elementor-image-box-wrapper{height: 201px; width: 300px; background-size: cover;}
+	.steps-slider .slider-controls{margin-top: 10px;}
+	.steps-slider .slick-prev::before, .steps-slider .slick-next::before {height: 24px;width: 24px;background-size: 24px 24px;}
+	header .elementor-menu-toggle{background-size: 48px 48px; width: 48px !important; height: 48px;}
+	header .elementor-nav-menu--dropdown{padding: 70px 30px 30px;}
+	.armoury-section {background-position: left -360px center !important;}
+	footer .button-brush{justify-content:center; display: flex; width: 100%;}
+	
+}
+@media only screen and (max-width:479px) {
+	body{font-size: 22px;}
+	.hero-section .elementor-element > p{font-size:28px;}
+	.section-title h2.elementor-heading-title{font-size: 30px;}
+	.sub-heading{font-size: 30px;}
+	.armoury-supply .elementor-widget-text-editor{background-size: 300px 112px; font-size: 26px; width: 300px;}
+	.hero-section p br{display:none; }
+	
+	.tax-wrapper .percent{font-size: 8rem;}
+	.tax-wrapper::before{left: 80px; }
+	.tax-wrapper .buy-tax{left: -10px; top: 0;}
+	.tax-wrapper .sell-tax{right: -10px; bottom: 80px;}
+	.main-section{min-height: 90vh;}
+	.coupon-code-wrapper .coupon-code {height: 80px;font-size: 40px; background-size: 233px 80px;width: 248px; line-height: 80px;}
+	.coupon-code-wrapper .copy-btn{background-size:72px auto; height: 72px; width: 75px;}
+}
+@media only screen and (max-width:399px) {
+	.hero-section .elementor-element > p{font-size:24px;}
+}
+html{
+	font-family: "Bitcount Prop Double Ink", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+}
